@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from './assets/img/Logo.png'
+import './sass/App.scss';
+import content from './js/slider/sliderContent';
+import Slider from './js/slider/slider';
+
+function Header() {
+  return(
+  <div className="Header">
+      <img src={logo} alt="logo"></img>
+      <div>
+      <h3>Facturación electrónica</h3>
+      <p className="highlight">Nuevo Sistema 3.3</p>
+      <p className="highlight">Servicio Personalizado</p>
+      </div>
+      
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Header></Header>
+    <Slider info={content.info} img={content.img} ></Slider>
     </div>
   );
 }
