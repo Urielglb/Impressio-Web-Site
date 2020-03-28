@@ -5,6 +5,7 @@ import App from './App';
 import './assets/fonts/Lato-Regular.ttf';
 import * as serviceWorker from './serviceWorker';
 
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
