@@ -5,7 +5,7 @@
   color:$morado;
 }
 
-.Header{
+.header{
   margin-top: 5%;
   margin-left: 8px;
   margin-right: 8px;
@@ -24,6 +24,51 @@
     @include center-vertical-horizontal;
     p{
       text-align: center;
+    }
+  }
+}
+
+.sidenav{
+  margin-top: 0;
+  padding: 5px;
+  position: fixed;
+  top: 1px;
+  .open-btn{
+    cursor: pointer;
+    margin-top: 0;
+  }
+  .fas{
+    color: $morado;
+  }
+  .nav-display{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    a{
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: $gris;
+      display: block;
+      transition: 0.3s;
+      i{
+       margin-right:8px; 
+      }
+    }
+    .close-btn {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
     }
   }
 }
@@ -70,6 +115,7 @@
       border-radius: 50%;
       display: inline-block;
       transition: background-color 0.6s ease;
+      margin-bottom: 5%;
     }
     .selected{
       background-color:rgba($color:$morado,$alpha:1);
@@ -79,7 +125,7 @@
 
 
 @media(max-width:576px){
-  .Header{
+  .header{
     img{
       width: 100%;
     }
