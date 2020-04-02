@@ -1,8 +1,7 @@
 import React from 'react';
 import ScrollMenu from '../slider/scrollMenu';
-import logo1 from '../../assets/img/Logo1.png';
-import logo2 from '../../assets/img/Logo2.png';
-import content from '../slider/scrollMenuContent';
+import logo from '../../assets/img/Logo.png';
+import content from '../slider/slider';
 import Sidenav from '../sidenav';
 
 
@@ -22,8 +21,7 @@ const SocialMedia = ()=>{
 const Header = ()=> {
     return(
     <div className="header">
-        <img src={logo1} alt="logo"></img>
-        <img src={logo2} alt="logo"></img>
+        <img src={logo} alt="logo"></img>
       </div>
     );
   }

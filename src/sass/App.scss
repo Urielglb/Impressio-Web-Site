@@ -21,7 +21,8 @@
   margin-bottom:5% ;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  align-self: center;
+  justify-content: center;
   padding: 10px;
   box-shadow: 6px 6px 1px rgba(0,0,0,.7);
   img{
@@ -117,7 +118,7 @@
 @media(max-width:576px){
   .header{
     img{
-      width: 150px;
+      width: 100%;
     }
   }
 }
