@@ -1,8 +1,8 @@
 import React from 'react';
 import './sass/App.scss';
-import Home from './jsx/pages/home';
-import Products from './jsx/pages/products';
-import ContactUs from './jsx/pages/contactUs';
+import Home from './js/pages/home';
+import Products from './js/pages/products';
+import ContactUs from './js/pages/contactUs';
 import {
   BrowserRouter as Router,
   Switch,

@@ -5,26 +5,28 @@
   color:$morado;
 }
 
-.header{
-  margin-top: 5%;
-  margin-left: 8px;
-  margin-right: 8px;
+.title{
+  font-size: 1.5em;
   background-color: white;
-  display: flex;
-  flex-direction: column;
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5%;
   border: solid black;
-  border-radius: 2%;
+  box-shadow: 6px 6px 1px rgba(0,0,0,.7);
+}
+
+.header{
+  background-color: white;
+  margin-bottom:5% ;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 10px;
   box-shadow: 6px 6px 1px rgba(0,0,0,.7);
   img{
-    width: 400px;
+    width: 200px;
     height: auto;
-    @include center-vertical-horizontal;
-  }
-  div{
-    @include center-vertical-horizontal;
-    p{
-      text-align: center;
-    }
   }
 }
 
@@ -73,61 +75,49 @@
   }
 }
 
-.slider{
-  .grid{
-    margin-top: 5%;
-    @include grid;
-    border-radius: 2%;
-    .text{
-      background-color: white;
-      border-radius: 2%;
-      @include grid-text(1,13,1em);
-      
+.scroll-menu{
+  margin-top: 5%;
+  overflow: auto;
+  white-space: nowrap;
+  .container{
+    color: $morado;
+    display: inline-block;
+    width: 300px;
+    @include text-center;
+    @include padding-top-bottom(10px,10px);
+    @include padding-left-right(10px,10px);
+    margin-left: 15px;
+    margin-bottom: 5%;
+    &:hover{
+      box-shadow: 10px 5px 10px rgba(0,0,0,.7);
     }
-    .img{
-      @include grid-image(1,13);
-      img{
-        width: 100%;
-        border-radius: 2%;
-      }
-    } 
-  }
-  #slider-text{
-    @include transition(.6s);
-      &.hide{
-          opacity: 0;
-          transform: translateX(100px);
-      }
-  
-  }
-  
-  .changer{
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    .dot {
-      text-align: center;
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color:rgba($color:$lila,$alpha:.4);
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-      margin-bottom: 5%;
+    &:last-of-type{
+      margin-right: 15px;
     }
-    .selected{
-      background-color:rgba($color:$morado,$alpha:1);
+    img{
+        cursor: pointer;
+        @include full;
+        height: 300px;
     }
   }
 }
 
 
+
+.social-media{
+  text-align: center;
+  h3{
+    color: $morado;
+  }
+  .fab{
+    margin-right: 8px;
+  }
+}
+
 @media(max-width:576px){
   .header{
     img{
-      width: 100%;
+      width: 150px;
     }
   }
 }
@@ -160,6 +150,12 @@
         }
       }
     }
+  }
+  .social-media{
+    display: flex;
+    flex-flow: row nowrap;
+    align-self: center;
+    justify-content: space-around;
   }
   
 }
