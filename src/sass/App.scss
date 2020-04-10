@@ -79,6 +79,12 @@ a{
   padding: 1em;
   background: url('../assets/img/fondo.jpg');
   text-align: center;
+  h2{
+    font-size: 15px;
+  }
+  h1{
+    font-size: 15px;
+  }
   img{
     width: 30px;
     height: 30px;
@@ -88,9 +94,6 @@ a{
     margin-bottom: 0;
   }
   .second-section{
-    h1{
-      font-size:  25px;
-    }
     .social-media{
       display: flex;
       flex-flow: column nowrap;
