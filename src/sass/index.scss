@@ -1,12 +1,12 @@
 @import './modules/variables';
 
 @font-face{
-  font-family: 'Lato';
-  src: local('Lato'), url(../assets/fonts/Lato-Regular.ttf) format('truetype');
+  font-family: 'Demi';
+  src: local('Demi'), url(../assets/fonts/ErasDemiITC.ttf) format('truetype');
 }
 
 body {
   margin: 0;
-  font-family: Lato;
-  background-color: rgba($color:$lila, $alpha: .5)
+  font-family: Demi;
+  background-color: white
 }

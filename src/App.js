@@ -1,8 +1,7 @@
 import React from 'react';
 import './sass/App.scss';
 import Home from './js/pages/home';
-import Products from './js/pages/products';
-import ContactUs from './js/pages/contactUs';
+import Tshirts from './js/pages/products/tshirts'
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,10 +13,10 @@ const Routes = ()=>{
   return(
     <Switch>
       <Route path= "/contact-us">
-        <ContactUs></ContactUs>
+        <h1>Hola</h1>
       </Route>
-      <Route path="/products">
-        <Products></Products>
+      <Route path="/tshirts">
+        <Tshirts></Tshirts>
       </Route>
       <Route path="/">
         <Home></Home>

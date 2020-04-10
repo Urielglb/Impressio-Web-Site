@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './sass/index.scss';
 import App from './App';
-import './assets/fonts/Lato-Regular.ttf';
+import './assets/fonts/ErasDemiITC.ttf'
 import * as serviceWorker from './serviceWorker';
 
 

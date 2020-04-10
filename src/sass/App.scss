@@ -5,159 +5,188 @@
   color:$morado;
 }
 
-.title{
-  font-size: 1.5em;
-  background-color: white;
-  @include text-center;
-  padding: 5px;
-  margin: 10px;
-  border-radius: 5%;
-  border: solid black;
-  box-shadow: 6px 6px 1px rgba(0,0,0,.7);
+a{
+  color: black;
+  text-decoration: none;
 }
 
 .header{
-  background-color: white;
+  padding: 1em;
+  background: url('../assets/img/fondo.jpg');
   margin-bottom:5% ;
-  display: flex;
-  flex-flow: row wrap;
-  align-self: center;
-  justify-content: center;
-  padding: 10px;
-  box-shadow: 6px 6px 1px rgba(0,0,0,.7);
+  .logo{
+    display: flex;
+    flex-flow: row wrap;
+    @include center-vertical-horizontal;
+    padding: 10px;
+  }
+  .sections{
+   @include row-space-around;
+    a{
+      font-size: 14.5px;
+    }
+  }
+
   img{
     width: 500px;
     height: auto;
   }
 }
 
-.sidenav{
-  margin-top: 0;
-  padding: 5px;
-  position: fixed;
-  top: 1px;
-  .open-btn{
-    cursor: pointer;
-    margin-top: 0;
+.separation{
+  display: flex;
+  flex-flow: column nowrap;
+  align-self: center;
+  justify-content: center;
+}
+
+.slider{
+  .img{
+    display: flex;
+    @include center-vertical-horizontal;
+    img{
+      @include full;
+      cursor: pointer;
+      @include transition(.6s);
+      &.hide{
+          opacity: 0;
+          transform: translateX(100px);
+      }
+    } 
   }
-  .fas{
-    color: $morado;
+  .changer{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    .dot {
+      text-align: center;
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color:rgba($color:$lila,$alpha:.4);
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .selected{
+      background-color:rgba($color:$morado,$alpha:1);
+    }
   }
-  .nav-display{
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    a{
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: $gris;
-      display: block;
-      transition: 0.3s;
-      i{
-       margin-right:8px; 
+}
+
+.contact-us{
+  padding: 1em;
+  background: url('../assets/img/fondo.jpg');
+  text-align: center;
+  img{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+  .first-section{
+    margin-bottom: 0;
+  }
+  .second-section{
+    h1{
+      font-size:  25px;
+    }
+    .social-media{
+      display: flex;
+      flex-flow: column nowrap;
+      a{
+        margin-bottom: 5%;
+      }
+      .mercado{
+        width: 50%;
+        height: 40px;
       }
     }
-    .close-btn {
-      cursor: pointer;
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
   }
+  
+  
 }
 
-.scroll-menu{
-  margin-top: 5%;
-  overflow: auto;
-  white-space: nowrap;
-  .container{
-    color: $morado;
-    display: inline-block;
-    width: 300px;
-    @include text-center;
-    @include padding-top-bottom(10px,10px);
-    @include padding-left-right(10px,10px);
-    margin-left: 15px;
-    margin-bottom: 5%;
-    &:hover{
-      box-shadow: 10px 5px 10px rgba(0,0,0,.7);
-    }
-    &:last-of-type{
-      margin-right: 15px;
-    }
+.tshirts{
+  .main-img{
     img{
-        cursor: pointer;
-        width: 100%;
-        height: 300px;
+      @include full
     }
   }
-}
-
-
-
-.social-media{
-  @include text-center;
-  h3{
-    color: $morado;
-  }
-  .fab{
-    margin-right: 8px;
+  .information{
+    @include row-space-around;
   }
 }
 
-@media(max-width:576px){
+@media(max-width:575.98px){
   .header{
+    .sections{
+      justify-content: space-between;
+      a{
+        font-size: 5px;
+      }
+    }
     img{
       width: 100%;
     }
   }
-}
-
-@media (max-width: 768.98px) {
-  .slider{
-    .grid{
-      .text{
-        min-height: 250px;
-      }
+  .tshirts{
+    .information{
+      font-size: 10px;
     }
   }
 }
 
-
+@media (min-width:576px) and (max-width: 767.98px) {
+  .header{
+    .sections{
+      a{
+        font-size: 10px;
+      }
+    }
+  }
+}
 @media(min-width:992px){  
-  .slider{
-    .grid{
-      .text{
-        @include grid-text(2,7,1.2em);
-        padding: 5px;
-        min-height: 280px;
-        font-size: 1.2em;
+  .tshirts{
+    .information{
+      @include padding-left-right(50px,50px);
+    }
+  }
+  .contact-us{
+    @include grid;
+
+  .first-section{
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    img{
+      width: 40px;
+      height: 40px;
+      margin-right: 5px;
+    }
+  }
+  .second-section{
+    text-align: center;
+    grid-column-start:6;
+    grid-column-end: 13;
+    .social-media{
+      width: 100%;
+      @include row-space-between;
+      img{
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
       }
-      .img{
-        @include grid-image(7,12);
-        img{
-          height: auto;
-          min-height: 290px;
-        }
+      .mercado{
+        width: 100%;
+        height: 40px;
+      }
+      a{
+        margin-right: 1em;
+        font-size: 20px;
       }
     }
   }
-  .social-media{
-    display: flex;
-    flex-flow: row nowrap;
-    align-self: center;
-    justify-content: space-around;
   }
-  
 }
 
