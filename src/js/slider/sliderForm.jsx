@@ -30,9 +30,9 @@ const DotsGenerator = (props)=>{
   let dots = [];
   for (let i = 0; i < props.length; i++) {
     dots.push(<span className={i === 0 ? "dot selected" : "dot"} onClick={()=>{
-      this.changeIndex(0);
+      props.onClick(i);
     }}
-    key={"dot"+i.toString}></span>);
+    key={i}></span>);
     
   }
   return dots;

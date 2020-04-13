@@ -10,7 +10,7 @@ const Home = ()=>{
     <div className = "home">
          <Header></Header>
          <Slider imgs={content}></Slider>
-         <ContactUs></ContactUs>
+         {/* <ContactUs></ContactUs> */}
     </div>
    
     );
