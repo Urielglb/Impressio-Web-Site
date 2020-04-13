@@ -16,8 +16,8 @@ const Gallery = (props)=> {
                 {navState?  <i className="fas fa-times"></i> : <i className="fas fa-palette"></i>}
                 </h2>
             <div className="colors">
-                <img src={content.colors} alt="Colores de playeras" style={
-                navState?  {width:"auto"} : {width:"0px"} 
+                <img src={content.colors} alt="Colores de playeras" className={
+                navState?  "display" : "hide" 
                 }></img>  
             </div>
             <div className="catalog">

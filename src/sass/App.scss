@@ -124,20 +124,23 @@ a{
     h2{
       margin-right: 5%;
     }
-    .id{
+    .colors{
       display: flex;
-      z-index: 1;
-      position: fixed;
-      transition: .6s;
-
+      flex-flow: row nowrap;
+      @include center-vertical-horizontal;
+      .display{
+        width: auto;
+      }
+      .hide{
+        width: 0;
+      }
     }
     .catalog{
       display: inline-block;
       img{
-        z-index: -1;
         width: 100px;
         height: 100px;
-        margin: 11%;
+        margin: 10.5%;
       }
     }
   }
@@ -173,8 +176,9 @@ a{
       .gallery{
         .catalog{
           img{
-            width: 150px;
-            height: 150px;
+            width: 130px;
+            height: 130px;
+            margin: 6%;
           }
         }
       }
@@ -204,6 +208,29 @@ a{
   .tshirts{
     .information{
       @include padding-left-right(50px,50px);
+    }
+    .gallery{
+      @include grid;
+      h2{
+       display: none;
+      }
+      .colors{
+        @include grid-column-image(10,13);
+        @include grid-row-image(1,13);
+        .hide{
+          width: 200px;
+          height: auto;
+        }
+      }
+      .catalog{
+        @include grid-row-image (1,13);
+        @include grid-column-image(1,10);
+        img{
+          width: 200px;
+          height: 200px;
+          margin: 5%;
+        }
+      }
     }
   }
   .contact-us{

@@ -43,9 +43,14 @@
     font-size: $size;
 }
 
-@mixin grid-image($start,$end){
+@mixin grid-column-image($start,$end){
     grid-column-start: $start;
     grid-column-end:$end;
+}
+
+@mixin grid-row-image($start,$end){
+    grid-row-start: $start;
+    grid-row-end:$end;
 }
 
 @mixin transition($speed) {
@@ -55,4 +60,5 @@
 @mixin grid {
     display: grid;
     grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,60px);
 }
