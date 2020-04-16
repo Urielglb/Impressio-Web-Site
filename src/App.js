@@ -12,10 +12,7 @@ import {
 const Routes = ()=>{
   return(
     <Switch>
-      <Route path= "/contact-us">
-        <h1>Hola</h1>
-      </Route>
-      <Route path="/tshirts">
+      <Route path="/#/tshirts">
         <Tshirts></Tshirts>
       </Route>
       <Route path="/">
