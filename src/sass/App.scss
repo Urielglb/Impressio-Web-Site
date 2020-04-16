@@ -48,6 +48,7 @@ a{
     img{
       @include full;
       cursor: pointer;
+      height: 100%;
       @include transition(.6s);
       &.hide{
           opacity: 0;
@@ -123,13 +124,6 @@ a{
     }
   }
 
-  .slider{
-    .img{
-      img{
-        height: 100%;
-      }
-    }
-  }
   .tshirts{
     .information{
       font-size: 10px;
