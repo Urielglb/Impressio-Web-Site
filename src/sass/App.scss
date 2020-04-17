@@ -100,6 +100,7 @@ a{
       }
       .hide{
         width: 0;
+        height: 0;
       }
     }
     .catalog{
@@ -189,11 +190,14 @@ a{
     }
   }
   .tshirts{
-    .information{
-      @include padding-left-right(50px,50px);
+    .main-img{
+      .information{
+        @include padding-left-right(50px,50px);
+      }
     }
     .gallery{
       @include grid;
+      overflow: hidden;
       h2{
        display: none;
       }
@@ -201,13 +205,13 @@ a{
         @include grid-column-image(10,13);
         @include grid-row-image(1,13);
         .hide{
-          width: 200px;
-          height: auto;
+          width: 230px;
+          height: 100%;
         }
       }
       .catalog{
-        @include grid-row-image (1,13);
         @include grid-column-image(1,10);
+        @include grid-row-image (1,13);
         img{
           width: 200px;
           height: 200px;
