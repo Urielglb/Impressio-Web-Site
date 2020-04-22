@@ -9,7 +9,7 @@ const Header = ()=> {
             <img src={logo} alt="logo"></img>
         </div>
         <div className="sections">
-            <Link to="/tshirts">PLAYERAS</Link>
+            <Link to="/playeras">PLAYERAS</Link>
             <Link to="/">
                 <div className="separation">
                     <span>ARTICULOS</span>
@@ -22,7 +22,7 @@ const Header = ()=> {
                     <span>Y BORDADOS</span>
                 </div>
             </Link>
-            <Link to="/">
+            <Link to="/imprenta">
                 <div className="separation">
                     <span>IMPRENTA Y</span>
                     <span>SEÑALIZACIÓN</span>

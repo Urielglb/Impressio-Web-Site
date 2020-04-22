@@ -37,6 +37,16 @@
     padding-right: $right;
 }
 
+@mixin margin-top-bottom($top,$bottom){
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+
+@mixin margin-left-right($left,$right){
+    margin-left: $left;
+    margin-right: $right;
+}
+
 @mixin grid-text($start,$end,$size) {
     grid-column-start: $start;
     grid-column-end: $end;

@@ -78,11 +78,6 @@ a{
 }
 
 .tshirts{
-  .main-img{
-    img{
-      @include full
-    }
-  }
   .information{
     @include row-space-around;
   }
@@ -112,7 +107,45 @@ a{
       }
     }
   }
-  
+}
+
+.printing{
+  .gallery{
+    display: flex;
+    flex-flow: wrap row;
+    align-self: center;
+    justify-content: center;
+    .blocks{
+      @include margin-left-right(2%,2%);
+      text-align: center;
+      color: rgba($color:$morado,$alpha:1);
+      padding: 0;
+      p{
+        font-size: 20px;
+      }
+      img{
+        width: 300px;
+        height: 400px;
+      }
+      &:last-of-type{
+        .text{
+          padding: 5px;
+        }
+      }
+    }
+    img{
+      @include margin-top-bottom(5%,5%);
+      @include margin-left-right(2%,2%);
+      width: 200px;
+      height: 300px;
+    }
+  }
+}
+
+.main-img{
+  img{
+    @include full
+  }
 }
 
 @media(max-width:575.98px){
@@ -157,6 +190,29 @@ a{
         }
       }
     }
+    .printing{
+      .blocks{
+        &:first-of-type{
+          .text{
+            p{
+              font-size: 40px;
+            }
+          }
+          img{
+            width: 350px;
+            height: 400px;
+          }
+        }
+      }
+      .gallery{
+        img{
+          @include margin-top-bottom(5%,5%);
+          @include margin-left-right(2%,2%);
+          width: 200px;
+          height: 500px;
+        }
+      }
+    }
   }
 
 @media (min-width:768px) and (max-width: 991.98px) {
@@ -167,6 +223,26 @@ a{
           width: 200px;
           height: 200px;
         }
+      }
+    }
+  }
+  .printing{
+    .gallery{
+      .blocks{
+        img{
+          width: 350px;
+        }
+        &:first-of-type{
+          p{
+            font-size: 45px;
+          }
+        }
+      }
+      img{
+        @include margin-top-bottom(5%,5%);
+        @include margin-left-right(2%,2%);
+        width: 200px;
+        height: 450px;
       }
     }
   }
@@ -197,7 +273,6 @@ a{
     }
     .gallery{
       @include grid;
-      overflow: hidden;
       h2{
        display: none;
       }
@@ -217,6 +292,32 @@ a{
           height: 200px;
           margin: 5%;
         }
+      }
+    }
+  }
+  .printing{
+    .gallery{
+      .blocks{
+        @include margin-left-right(2%,2%);
+        img{
+          width: 750px;
+          height: 800px;
+        }
+        &:first-of-type{
+          p{
+            font-size: 55px;
+          }
+        }
+        &:last-of-type{
+          p{
+            font-size: 30px;
+          }
+        }
+      }
+      img{
+        @include margin-left-right(2%,2%);
+        width: 450px;
+        height: 800px;
       }
     }
   }
