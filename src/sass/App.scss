@@ -142,10 +142,12 @@ a{
   .gallery{
     .first-section{
       @include center-vertical-horizontal-direction(row,wrap);
+      align-items: stretch;
+      flex-basis: auto;
       img{
         margin: 2%;
         width: 100px;
-        height: 110%;
+        height: 100%;
         &:nth-child(even){
           height: 200px;
         }
@@ -156,7 +158,7 @@ a{
       img{
         margin: 2%;
         width: 200px;
-        height: auto;
+        height: 500px;
       }
     }
   }
@@ -277,6 +279,12 @@ a{
           }
         }
       }
+      .second-section{
+        img{
+          width: 300px;
+          height: 500px;
+        }
+      }
     }
   }
   .slider{
@@ -361,7 +369,7 @@ a{
         img{
           margin: 3%;
           width: 200px;
-          height: 110%;
+          height: 100%;
           &:nth-child(even){
             height: 300px;
           }
@@ -372,6 +380,7 @@ a{
         img{
           margin: 4%;
           width: 350px;
+          height: 650px;
         }
       }
     }
