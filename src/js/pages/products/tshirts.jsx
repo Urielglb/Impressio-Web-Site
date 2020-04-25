@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../../header';
-import content from './tshirtsContent'
+import content from './content/tshirtsContent'
 import ContactUs from '../../contactUs';
 import { useState } from 'react';
 

@@ -3,6 +3,7 @@ import './sass/App.scss';
 import Home from './js/pages/home';
 import Tshirts from './js/pages/products/tshirts'
 import Printing from './js/pages/products/printing'
+import Articles from './js/pages/products/articles'
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,6 +19,9 @@ const Routes = ()=>{
       </Route>
       <Route path="/imprenta">
         <Printing></Printing>
+      </Route>
+      <Route path="/articulos-personalizados">
+        <Articles></Articles>
       </Route>
       <Route path="/">
         <Home></Home>

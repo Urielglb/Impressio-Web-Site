@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../../header';
-import content from './printingContent'
+import content from './content/printingContent'
 import ContactUs from '../../contactUs';
 
 

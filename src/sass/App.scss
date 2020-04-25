@@ -15,9 +15,7 @@ a{
   background: url('../assets/img/fondo.jpg');
   margin-bottom:5% ;
   .logo{
-    display: flex;
-    flex-flow: row wrap;
-    @include center-vertical-horizontal;
+    @include center-vertical-horizontal-direction(row,wrap);
     padding: 10px;
   }
   .sections{
@@ -87,9 +85,7 @@ a{
       margin-right: 5%;
     }
     .colors{
-      display: flex;
-      flex-flow: row nowrap;
-      @include center-vertical-horizontal;
+      @include center-vertical-horizontal-direction(row,nowrap);
       .display{
         width: auto;
       }
@@ -138,6 +134,30 @@ a{
       @include margin-left-right(2%,2%);
       width: 200px;
       height: 300px;
+    }
+  }
+}
+
+.articles{
+  .gallery{
+    .first-section{
+      @include center-vertical-horizontal-direction(row,wrap);
+      img{
+        margin: 2%;
+        width: 100px;
+        height: auto;
+        &:nth-child(even){
+          height: 200px;
+        }
+      }
+    }
+    .second-section{
+      @include center-vertical-horizontal-direction(row,wrap);
+      img{
+        margin: 2%;
+        width: 200px;
+        height: auto;
+      }
     }
   }
 }
@@ -246,6 +266,19 @@ a{
       }
     }
   }
+  .articles{
+    .gallery{
+      .first-section{
+        @include center-vertical-horizontal-direction(row,wrap);
+        img{
+          width: 150px;
+          &:nth-child(even){
+            height: 275px;
+          }
+        }
+      }
+    }
+  }
   .slider{
     .img{
       height: 280px;
@@ -318,6 +351,28 @@ a{
         @include margin-left-right(2%,2%);
         width: 450px;
         height: 800px;
+      }
+    }
+  }
+  .articles{
+    .gallery{
+      .first-section{
+        @include center-vertical-horizontal-direction(row,wrap);
+        img{
+          margin: 3%;
+          width: 200px;
+          height: auto;
+          &:nth-child(even){
+            height: 300px;
+          }
+        }
+      }
+      .second-section{
+        @include center-vertical-horizontal-direction(row,wrap);
+        img{
+          margin: 4%;
+          width: 350px;
+        }
       }
     }
   }

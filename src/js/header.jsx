@@ -10,7 +10,7 @@ const Header = ()=> {
         </div>
         <div className="sections">
             <Link to="/playeras">PLAYERAS</Link>
-            <Link to="/">
+            <Link to="/articulos-personalizados">
                 <div className="separation">
                     <span>ARTICULOS</span>
                     <span>PERSONALIZADOS</span>
