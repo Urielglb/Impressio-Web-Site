@@ -5,36 +5,24 @@ import ContactUs from '../../contactUs';
 
 
 const Gallery = (props)=> {
-    let i = 1;
     const imgs =  props.imgs.map((info)=>{
-        if (i===1) {
-            i++;
-            return(
-                <div className="blocks">
-                    <div className="text">
-                        <p>Papelería impresa</p>
-                    </div>
-                    <img src={info.src} alt={info.alt} key={info.alt}></img>
-                </div>
-            );
-        }
-        if (i===3) {
-            i++;
-            return(
-                <div className="blocks">
-                    <img src={info.src} alt={info.alt} key={info.alt}></img>
-                    <div className="text">
-                        <p>Lonas,Vinil Impreso con corte a registro <br></br> Corte Vinil adhesivo y Textil</p>
-                    </div>
-                </div>
-            );
-        }
-        i++;
         return <img src={info.src} alt={info.alt} key={info.alt}></img>
     });
     return(
         <div className = "gallery">
-                {imgs}
+                <div className="blocks">
+                    <p>Papelería Impresa</p>
+                    {imgs.slice(0,2)}
+                </div>
+                {imgs[2]}
+                <div className="blocks">
+                    {imgs.slice(3,5)}
+                    <p>Lonas, Vinil Impreso con corte a registro 
+                    <br></br>
+                    Corte Vinil adhesivo y Textil
+                    </p>
+                </div>
+                {imgs[5]}
         </div>
 
     );

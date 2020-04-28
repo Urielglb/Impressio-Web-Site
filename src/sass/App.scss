@@ -112,13 +112,18 @@ a{
     }
   }
 }
-
 .printing{
   .gallery{
     display: flex;
     flex-flow: wrap row;
     align-self: center;
     justify-content: center;
+    img{
+      margin: 20px;
+      width: 150px;
+      height: 200px;
+ 
+    }
     .blocks{
       @include margin-left-right(2%,2%);
       text-align: center;
@@ -126,22 +131,18 @@ a{
       padding: 0;
       p{
         font-size: 20px;
+        margin: 0;
       }
       img{
-        width: 300px;
-        height: 400px;
+        margin: 10px;
+        width: 150px;
+        height: 200px;
       }
       &:last-of-type{
         .text{
           padding: 5px;
         }
       }
-    }
-    img{
-      @include margin-top-bottom(5%,5%);
-      @include margin-left-right(2%,2%);
-      width: 200px;
-      height: 300px;
     }
   }
 }
@@ -155,10 +156,7 @@ a{
       img{
         margin: 2%;
         width: 100px;
-        height: 100%;
-        &:nth-child(even){
-          height: 200px;
-        }
+        height: 200px;
       }
     }
     .second-section{
@@ -228,25 +226,25 @@ a{
       }
     }
     .printing{
-      .blocks{
-        &:first-of-type{
-          .text{
-            p{
-              font-size: 40px;
-            }
-          }
-          img{
-            width: 350px;
-            height: 400px;
-          }
-        }
-      }
       .gallery{
         img{
-          @include margin-top-bottom(5%,5%);
-          @include margin-left-right(2%,2%);
+          margin: 25px;
           width: 200px;
-          height: 500px;
+          height: 250px;
+        }
+        .blocks{
+          img{
+            margin: 15px;
+            width: 200px;
+            height: 250px;
+          }
+          &:first-of-type{
+            .text{
+              p{
+                font-size: 40px;
+              }
+            }
+          }
         }
       }
     }
@@ -272,21 +270,20 @@ a{
   }
   .printing{
     .gallery{
+      img{
+        width: 250px;
+        height: 300px;
+      }
       .blocks{
         img{
-          width: 350px;
+          width: 250px;
+          height: 300px;
         }
         &:first-of-type{
           p{
             font-size: 45px;
           }
         }
-      }
-      img{
-        @include margin-top-bottom(5%,5%);
-        @include margin-left-right(2%,2%);
-        width: 200px;
-        height: 450px;
       }
     }
   }
@@ -296,9 +293,7 @@ a{
         @include center-vertical-horizontal-direction(row,wrap);
         img{
           width: 150px;
-          &:nth-child(even){
-            height: 275px;
-          }
+          height: 250px;
         }
       }
       .second-section{
@@ -366,11 +361,16 @@ a{
   }
   .printing{
     .gallery{
+      img{
+        margin: 10px;
+        width: 300px;
+        height: 350px;
+      }
       .blocks{
-        @include margin-left-right(2%,2%);
         img{
-          width: 750px;
-          height: 800px;
+          margin: 35px;
+          width: 300px;
+          height: 350px;
         }
         &:first-of-type{
           p{
@@ -383,12 +383,8 @@ a{
           }
         }
       }
-      img{
-        @include margin-left-right(2%,2%);
-        width: 450px;
-        height: 800px;
-      }
     }
+
   }
   .articles{
     .gallery{
@@ -397,10 +393,7 @@ a{
         img{
           margin: 3%;
           width: 200px;
-          height: 100%;
-          &:nth-child(even){
-            height: 300px;
-          }
+          height: 300px;
         }
       }
       .second-section{
@@ -414,4 +407,3 @@ a{
     }
   }
 }
-
