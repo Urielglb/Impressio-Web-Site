@@ -42,7 +42,7 @@ const Tshirts = ()=>{
                 </div>
             </div>
                 <Gallery imgs = {content.imgs}></Gallery>
-            {/* <ContactUs></ContactUs> */}
+            <ContactUs></ContactUs>
         </div>
     );
 

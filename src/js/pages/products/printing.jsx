@@ -38,7 +38,7 @@ const Printing = ()=>{
                 <img src={content.mainImg} alt="imagen principal"></img>
             </div>
                 <Gallery imgs = {content.imgs}></Gallery>
-            {/* <ContactUs></ContactUs> */}
+            <ContactUs></ContactUs>
         </div>
     );
 
