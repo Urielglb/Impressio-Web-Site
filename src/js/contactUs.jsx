@@ -8,22 +8,22 @@ const ContactUs = ()=>{
   return(
       <div className="contact-us">
         <div className="first-section">
-          <h2>
+          <h1>
           <img src ={whats} alt="whatsapp"></img>
           555075-4410
-          </h2>
+          </h1>
           <h2>impressio_lh@hotmail.com</h2>
         </div>
-        <div className="second-section separation">
+        <div className="second-section">
           <h1>Tel:5679-4521</h1>
-          <div className="social-media">
-            <a><img src={mercadoLibre} className="mercado" alt="mercado libre"></img></a>
+          <div className="imgs">
+            <a><img src={mercadoLibre} alt="mercado libre" id="mercado"></img></a>
             <a>
-              <img src={facebook}></img>
+              <img src={facebook} alt="Facebook"className="social-media"></img>
               impressio
               </a>
-              <a href="https://www.instagram.com/impressio_l/?hl=es-la">
-              <img src={instagram}></img>
+              <a href="https://www.instagram.com/impressio_l/?hl=es-la"> 
+              <img src={instagram} alt="instagram" className="social-media"></img>
               impressio_l
               </a>
           </div>

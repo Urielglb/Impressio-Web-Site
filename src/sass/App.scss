@@ -11,9 +11,11 @@ a{
 }
 
 .home{
-  #masks{
-    width: 100%;
-    height: 450px;
+  .mouth-cover{
+    img{
+      width: 100%;
+      height: 450px;
+    }
   }
   text-align: center;
 }
@@ -176,6 +178,39 @@ a{
   }
 }
 
+.contact-us{
+  margin-top: 10%;
+  background: url('../assets/img/fondo.jpg');
+  display:flex;
+  flex-flow:column wrap;
+  .first-section{
+    img{
+      height: 30px;
+      width: 30px;
+    }
+  }
+  .second-section{
+    .imgs{
+      display: flex;
+      flex-flow: row wrap;
+      align-self: center;
+      justify-content: space-around;
+      a{
+        margin: 2%;
+        font-size: 2em;
+      }
+      .social-media{
+        width: 30px;
+        height: 30px;
+      }
+      #mercado{
+        height: 45px;
+        width: 200px;
+      }
+    }
+  }
+}
+
 @media(max-width:575.98px){
   .header{
     .sections{
@@ -195,12 +230,16 @@ a{
 
 @media (min-width:576px) and (max-width: 767.98px) {
   .home{
-    #masks{
-      width: 400px;
-      height: 500px;
+    .mouth-cover{
+      img{
+        width: 100%;
+        height: 450px;
+      }
+    }
+    h2{
+      font-size: 2em;
     }
   }
-  
   .header{
     .sections{
       a{
@@ -252,10 +291,16 @@ a{
 
 @media (min-width:768px) and (max-width: 991.98px) {
   .home{
-    #masks{
-      width: 450px;
-      height: 550px;
+    .mouth-cover{
+      img{
+        width: 450px;
+        height: 550px;
+      }
+      h2{
+        font-size: 3em;
+      }
     }
+
   }
   
   .tshirts{
@@ -314,9 +359,14 @@ a{
 
 @media(min-width:992px){  
   .home{
-    #masks{
-      width: 550px;
-      height: 650px;
+    .mouth-cover{
+      img{
+        width: 550px;
+        height: 650px;
+      }
+      h2{
+        font-size: 4em;
+      }
     }
   }
   .header{
@@ -402,6 +452,33 @@ a{
           margin: 4%;
           width: 350px;
           height: 650px;
+        }
+      }
+    }
+  }
+  .contact-us{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    .first-section{
+      grid-column-start: 2;
+      grid-column-end:7;   
+      img{
+        height: 50px;
+        width: 50px;
+      }
+      h1{
+        font-size: 3em;
+      }
+      h2{
+        font-size: 2em;
+      }
+    }
+    .second-section{
+      grid-column-start: 7;
+      grid-column-end:12;
+      .imgs{
+        a{
+          font-size: 1.5em;
         }
       }
     }
